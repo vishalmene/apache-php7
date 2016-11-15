@@ -18,6 +18,7 @@ COPY . /var/www/html
 RUN chown www-data:www-data /var/www/html/info.php
 
 RUN /usr/sbin/a2dismod 'mpm_*' && /usr/sbin/a2enmod mpm_prefork
+RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 80
 EXPOSE 443
