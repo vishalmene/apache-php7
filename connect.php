@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect("some-mysql", "root", "root", "mysql");
+$link = mysqli_connect("some-mysql", "root", "root", "mysql",3300);
 
 if (!$link) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
