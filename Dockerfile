@@ -10,7 +10,7 @@ MAINTAINER Vishal Mene <vishal.mene@gmail.com>
 RUN apt-get -yqq update
 RUN apt-get -yqq install apache2
 RUN chown www-data:www-data /var/www/html -Rf
-RUN apt-get -yqq install php7.0 libapache2-mod-php7.0
+RUN apt-get -yqq install php7.0 libapache2-mod-php7.0 php7.0-mysql
 RUN /usr/sbin/apache2ctl restart 
 
 COPY . /var/www/html
